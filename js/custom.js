@@ -4,38 +4,64 @@
 ---------------------------------------------------------------------*/
 
 // ==========================================
-// CARGA DINÁMICA DE COMPONENTES (HEADER Y FOOTER)
+// CARGA DINÁMICA DE COMPONENTES (HEADER, FOOTER Y WHATSAPP)
 // ==========================================
 document.addEventListener("DOMContentLoaded", function () {
-    // 1. Cargar el Menú de Navegación
+    // 1. Cargar el Menú de Navegación (Header)
     const headerPlaceholder = document.getElementById("header-placeholder");
     if (headerPlaceholder) {
         fetch("componentes/header.html")
-            .then(response => {
-                if (!response.ok) throw new Error("Error al cargar el header");
-                return response.text();
-            })
+            .then(response => response.text())
             .then(data => {
-                headerPlaceholder.outerHTML = data; // <--- AQUÍ ESTÁ EL CAMBIO
-                marcarEnlaceActivo(); // Ilumina la página actual en el menú
+                headerPlaceholder.outerHTML = data;
+                marcarEnlaceActivo();
             })
             .catch(error => console.error(error));
     }
 
-    // 2. Cargar el Pie de Página
+    // 2. Cargar el Pie de Página (Footer)
     const footerPlaceholder = document.getElementById("footer-placeholder");
     if (footerPlaceholder) {
         fetch("componentes/footer.html")
-            .then(response => {
-                if (!response.ok) throw new Error("Error al cargar el footer");
-                return response.text();
-            })
+            .then(response => response.text())
             .then(data => {
                 footerPlaceholder.innerHTML = data;
             })
             .catch(error => console.error(error));
     }
+
+    // 3. Cargar el Botón Flotante de WhatsApp
+    const whatsappPlaceholder = document.getElementById("whatsapp-placeholder");
+    if (whatsappPlaceholder) {
+        fetch("componentes/whatsapp.html")
+            .then(response => {
+                if (!response.ok) throw new Error("Error al cargar el botón de WhatsApp");
+                return response.text();
+            })
+            .then(data => {
+                whatsappPlaceholder.innerHTML = data;
+                // Una vez cargado el HTML en el DOM, activamos su lógica para móviles
+                inicializarLogicaWhatsappMovil();
+            })
+            .catch(error => console.error(error));
+    }
 });
+
+// Función de control para el menú de WhatsApp en pantallas táctiles
+function inicializarLogicaWhatsappMovil() {
+    const desplegados = document.querySelectorAll('.btn-desplegado');
+    
+    if (window.matchMedia("(max-width: 768px)").matches) {
+        desplegados.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                if (!btn.classList.contains('active-wa')) {
+                    e.preventDefault();
+                    btn.classList.add('active-wa');
+                }
+            });
+        });
+    }
+}
 
 // Función para detectar la URL actual y añadir las clases activas de Bootstrap
 function marcarEnlaceActivo() {
