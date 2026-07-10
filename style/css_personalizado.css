@@ -11,6 +11,8 @@ body {
     font-family: 'Poppins', sans-serif;
     color: var(--sos-dark);
     font-size: 1rem;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .text-sos-cyan {
@@ -151,6 +153,7 @@ body {
 .services-section {
     background-color: var(--sos-dark);
     padding: 20px 0;
+    overflow-x: hidden;
 }
 
 .services-title {
@@ -169,6 +172,7 @@ body {
     flex-wrap: nowrap;
     padding: 0 30px 0 80px;
     width: 100%;
+    overflow-x: hidden;
 }
 
 .contact-button-container {
