@@ -93,8 +93,8 @@ function marcarEnlaceActivo() {
 const datosServiciosMIP = {
     monitoreo: {
         titulo: "Diagnóstico y monitoreo",
-        img1: "img/mip_Recurso001.png", 
-        img2: "img/mip_Recurso002.png",
+        img1: "img/mip_Recurso001.webp", 
+        img2: "img/mip_Recurso002.webp",
         titulotexto1: "Diagnóstico",
         titulotexto2: "Monitoreo", 
         texto1: "Durante el diagnóstico verificamos la plaga existente y el grado de infestación dentro del domicilio o establecimiento, para así poder definir el tratamiento necesario para su control.",
@@ -102,8 +102,8 @@ const datosServiciosMIP = {
     },
     preventivos: {
         titulo: "Tratamientos preventivos",
-        img1: "img/mip_Recurso001.png",
-        img2: "img/mip_Recurso002.png",
+        img1: "img/mip_Recurso001.webp",
+        img2: "img/mip_Recurso002.webp",
         titulotexto1: "Prevención en el hogar",
         titulotexto2: "Espacios seguros",
         texto1: "Implementamos estrategias avanzadas de Manejo Integral de Plagas enfocadas en la identificación y el control oportuno. Utilizamos barreras de protección efectivas que previenen amenazas sin alterar tus actividades cotidianas.",
@@ -111,8 +111,8 @@ const datosServiciosMIP = {
     },
     puntual: {
         titulo: "Control puntual",
-        img1: "img/mip_Recurso001.png",
-        img2: "img/mip_Recurso002.png",
+        img1: "img/mip_Recurso001.webp",
+        img2: "img/mip_Recurso002.webp",
         titulotexto1: "Ataque dirigido",
         titulotexto2: "Bajo impacto",
         texto1: "Aplicamos tratamientos específicos y focalizados para erradicar infestaciones activas. Utilizamos productos de calidad internacional que actúan directamente sobre la plaga, garantizando la eliminación del problema de raíz.",
@@ -120,8 +120,8 @@ const datosServiciosMIP = {
     },
     asesoria: {
         titulo: "Asesoría en manejo",
-        img1: "img/mip_Recurso001.png", 
-        img2: "img/mip_Recurso002.png",
+        img1: "img/mip_Recurso001.webp", 
+        img2: "img/mip_Recurso002.webp",
         titulotexto1: "Mejores prácticas",
         titulotexto2: "Mantenimiento",
         texto1: "Brindamos recomendaciones técnicas sobre hábitos de higiene, exclusión y almacenamiento. Nuestro objetivo es capacitarte para eliminar las condiciones que favorecen la aparición y reproducción de plagas en tus espacios.",
